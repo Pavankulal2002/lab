@@ -4,7 +4,7 @@ import java.util.*;
 
 class TCPClient{
 
-	public static void main(String args[])throws Exception{
+	public static void main(String args[])throws IOException{
 		Socket S=new Socket("localhost",4000);
 		Scanner Sc=new Scanner(System.in);
 		System.out.println("enter your file name");
@@ -31,7 +31,7 @@ class TCPClient{
   			System.out.print(str);
 		}
 
-	
+	S.close();
 }
 }
 

@@ -2,7 +2,7 @@ import java.net.*;
 import java.io.*;
 
 class TCPServer{
-	public static void main(String args[])throws Exception{
+	public static void main(String args[])throws IOException{
 		ServerSocket Sc=new ServerSocket(4000);
 		System.out.println("Server is ready for connection");
 
@@ -17,9 +17,12 @@ class TCPServer{
 	
 		int i;
 		while((i=fr.read())!=-1)
-			
+			{
 			pr.println((char)i);
-		pr.flush();
+		    pr.flush();
+			}
+		S.close();
 	}
+ 
 }
 
